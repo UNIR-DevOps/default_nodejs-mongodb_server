@@ -6,16 +6,10 @@ Este es un servidor Express básico con una conexión MongoDB establecida. Puede
 
 ### 1. Instalar las dependencias requeridas
 
-En primer lugar, necesitas crear el archivo package.json. Puedes hacerlo ejecutando el siguiente comando en la terminal:
+En primer lugar, necesitas instalar los paquetes básicos necesarios. Puedes hacerlo ejecutando este comando:
 
 ```bash
-npm init -y
-```
-
-Luego, debes instalar los paquetes básicos necesarios. Puedes hacerlo ejecutando este comando:
-
-```bash
-npm install express mongodb
+npm install 
 ```
 
 ### 2. Iniciar el servidor

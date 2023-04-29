@@ -1,0 +1,11 @@
+# Directories
+node_modules/
+dist/
+coverage/
+tmp/
+logs/
+# Files
+.env
+.env.*
+*.log
+*.pid

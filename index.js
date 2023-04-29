@@ -15,7 +15,7 @@ MongoClient.connect(url, function(err, db) {
 
   // Insert a new user document
   app.post('/users', (req, res) => {
-    const user = { name: req.body.name, email: req.body.email, created_date: new Date(); };
+    const user = { name: req.body.name, email: req.body.email, created_date: new Date() };
     db.collection('users').insertOne(user, (err, result) => {
       if (err) throw err;
 
