@@ -18,7 +18,7 @@ npm install express mongodb
 ## 2. Inicie el servidor
 
 ```bash
-npm install express mongodb
+node index.js
 ```
 
 ## 3. Probar el servidor
