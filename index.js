@@ -7,7 +7,7 @@ app.use(express.json());
 // Bienvenida
 app.get('/', async (req, res) => {
   try {
-    res.send("Bienvenido " + (req.params.name ?? "Andres Olarte"));
+    res.send("Bienvenido al servicio de Andres Olarte");
   } catch (err) {
     res.status(500).send(err);
   }
