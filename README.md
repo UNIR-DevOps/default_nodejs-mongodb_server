@@ -1,4 +1,4 @@
-# Default Node.js-MongoDB Server
+# Default Node.js_MongoDB Server
 
 Este es un servidor Express básico con una conexión MongoDB establecida. Puedes agregar algunas operaciones de base de datos a este servidor para adaptarlo a tus necesidades.
 
