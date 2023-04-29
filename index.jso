@@ -12,8 +12,8 @@ MongoClient.connect(url, function(err, db) {
     const user = { name: req.body.name, email: req.body.email };
     db.collection('users').insertOne(user, function(err, result) {
       if (err) throw err;
-      console.log('User inserted');
-      res.send('User inserted');
+      console.log('hellow ' + req.body.name);
+      res.send('hellow ' + req.body.name);
     });
   });
 });
