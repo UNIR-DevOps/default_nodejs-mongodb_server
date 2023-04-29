@@ -1,6 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
 const app = express();
+dotenv.config();
 
 app.use(express.json());
 
@@ -13,18 +16,17 @@ app.get('/', async (req, res) => {
   }
 });
 
-const users = require('./models/users');
-const url = 'mongodb://localhost:27017/mydb';
 
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Conexión exitosa a la base de datos'))
   .catch((err) => console.log('Error al conectar a la base de datos: ' + err));
 
+const users = require('./models/users');
+
 // Crear una usuario
 app.post('/users', async (req, res) => {
-  const user = new users(req.body);
-
   try {
+    const user = new users(req.body);
     await user.save();
     res.send(user);
   } catch (err) {
@@ -78,6 +80,6 @@ app.delete('/users/:id', async (req, res) => {
   }
 });
 
-app.listen(3000, function () {
-  console.log('Listening on port 3000');
+app.listen(process.env.PORT, function () {
+  console.log(`Servidor en ejecución en el puerto ${process.env.PORT}`);
 });
