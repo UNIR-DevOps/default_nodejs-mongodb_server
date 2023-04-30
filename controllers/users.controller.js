@@ -15,8 +15,7 @@ module.exports.post = async (req, res) => {
 // Obtener usuario por id
 module.exports.getById = async (req, res) => {
   try {
-    console.log(req.params.id);
-    const user = await model.findOne({_id: req.params.id});
+    const user = await model.findOne({ _id: req.params.id });
     if (!user) {
       res.status(404).send('Usuario no encontrado.');
     }
@@ -42,7 +41,7 @@ module.exports.get = async (req, res) => {
 // Actualizar una usuario
 module.exports.patch = async (req, res) => {
   try {
-    await model.findByIdAndUpdate(req.params.id, req.body, modified_date = new Date());
+    await model.findByIdAndUpdate(req.params.id, { name: req.body.name, mail: req.body.mail, modified_date: new Date() });
     await model.save();
     res.send(model);
   } catch (err) {

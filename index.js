@@ -8,6 +8,9 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors());
+
 let userRoutes = require("./routes/users.routes");
 app.use("/users", userRoutes);
 
