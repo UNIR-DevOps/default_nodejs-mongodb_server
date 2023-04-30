@@ -4,13 +4,21 @@ Este es un servidor Express básico con una conexión MongoDB establecida. Puede
 
 ## Pasos para empezar
 
+### 0. Configurar variables de entorno
+
+Cree un archivo llamado en la carpeta raiz .env y agregue el siguiente texto:
+
+```env
+MONGO_URI=mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000
+PORT=3000
+```
+
 ### 1. Instalar las dependencias requeridas
 
 En primer lugar, necesitas instalar los paquetes básicos necesarios. Puedes hacerlo ejecutando este comando:
 
 ```bash
 npm install 
-```
 
 ### 2. Iniciar el servidor
 
