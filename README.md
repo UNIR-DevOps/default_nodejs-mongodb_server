@@ -1,4 +1,4 @@
-# Configuración de un servidor Node.js con conexión a MongoDB
+# API Rest Node.js con conexión a MongoDB
 
 Este documento proporciona instrucciones sobre cómo configurar y ejecutar un servidor Node.js con una conexión a una base de datos MongoDB.
 
@@ -37,11 +37,13 @@ Una vez que hayas instalado Node.js y MongoDB en tu sistema, sigue estos pasos p
 4. Crea un archivo llamado .env en la carpeta raíz del proyecto y agrega las siguientes variables de entorno:
 
     ```env
-    MONGO_URI=mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000
+    MONGO_URI=mongodb://127.0.0.1:27017/mydb?directConnection=true&serverSelectionTimeoutMS=2000
     PORT=3000
+    OWNER=MyName
     ```
 
-    La variable MONGO_URI es la ruta de conexión a la base de datos de MongoDB. Si estás utilizando una base de datos que no está en tu máquina local, asegúrate de modificar esta ruta. La variable PORT es el puerto en el que se expondrá el servicio Node.js.
+   * La variable MONGO_URI es la ruta de conexión a la base de datos de MongoDB. Si estás utilizando una base de datos que no está en tu máquina local, asegúrate de modificar esta ruta y nombrar una base de datos existente.
+   * La variable PORT es el puerto en el que se expondrá el servicio Node.js.
 
 5. Ahora, estás listo para iniciar el servidor. Ejecuta el siguiente comando en la terminal:
 
@@ -59,4 +61,4 @@ Una vez que hayas instalado Node.js y MongoDB en tu sistema, sigue estos pasos p
 
 Este documento está dirigido a desarrolladores que buscan configurar un servidor básico con Express y MongoDB. Si eres nuevo en el desarrollo web o no estás familiarizado con estas tecnologías, te recomendamos buscar recursos adicionales para complementar esta documentación.
 
-Para ver mas detalles vea [Postman](https://documenter.getpostman.com/view/18212046/2s93eSZv7q)
+Para ver mas detalles vea [Postman](https://lively-rocket-815720.postman.co/workspace/My-Workspace~7aa1f039-7a2d-423a-8248-30e6811157c6/collection/18212046-9a48624d-ff50-477b-8197-fb33f6d0a34d?action=share&creator=18212046), [Postman document](https://documenter.getpostman.com/view/18212046/2s93eSZv7q)
